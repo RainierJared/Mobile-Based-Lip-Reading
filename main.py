@@ -1,5 +1,5 @@
-from View.view import view
+from View.view import webServer
 
-class __main__:
-    if __name__ == "__main__":
-        view().run()    
+if __name__ == '__main__':
+    pwa = webServer('MLR',template_folder='./templates')
+    pwa.run(host='192.168.1.32', port='8000', debug=True)
