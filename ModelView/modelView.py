@@ -1,5 +1,6 @@
 import cv2
 import numpy as np
+from Model.model import lipReading
 
 class VideoCamera():
     def __init__(self):
@@ -10,6 +11,8 @@ class VideoCamera():
         
     def get_frame(self):
         success, img = self.video.read()
-        success, jpeg = cv2.imencode('.jpg', img)
-        
+        if success:        
+            obj = lipReading()
+            obj.start(img)
+            ret, jpeg = cv2.imencode('.jpg', img)
         return jpeg.tobytes()
