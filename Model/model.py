@@ -4,12 +4,12 @@ import numpy as np
 import mediapipe as mp
 
 
-model_dict=pickle.load(open('./model.p','rb'))
+model_dict=pickle.load(open('./Model/model.p','rb'))
 model=model_dict['model']
 labels_dict = {0: 'Hello', 1: 'Goodbye', 2: 'Help'}
 
 mp_face = mp.solutions.face_mesh
-face_mesh = mp_face.FaceMesh(static_image_mode=True, min_detection_confidence=0.3)
+face_mesh = mp_face.FaceMesh(static_image_mode=False, min_detection_confidence=0.3)
 
 class lipReading():
     global labels_dict, word_read
