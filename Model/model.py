@@ -9,7 +9,7 @@ model=model_dict['model']
 labels_dict = {0: 'Hello', 1: 'Goodbye', 2: 'Help'}
 
 mp_face = mp.solutions.face_mesh
-face_mesh = mp_face.FaceMesh(static_image_mode=False, min_detection_confidence=0.3)
+face_mesh = mp_face.FaceMesh(static_image_mode=True, min_detection_confidence=0.3)
 
 class lipReading():
     global labels_dict, word_read
@@ -20,7 +20,6 @@ class lipReading():
         self.temp  = [] 
 
     def start(self, frame):
-        
         #Facial Landmarks
         results = face_mesh.process(frame)
         if results.multi_face_landmarks:

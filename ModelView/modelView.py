@@ -11,8 +11,9 @@ class VideoCamera():
         
     def get_frame(self):
         success, img = self.video.read()
-        if success:        
+        if success:   
             obj = lipReading()
+            img = cv2.resize(img,(640,480))
             obj.start(img)
             ret, jpeg = cv2.imencode('.jpg', img)
         return jpeg.tobytes()
