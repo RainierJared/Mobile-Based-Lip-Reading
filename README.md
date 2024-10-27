@@ -4,8 +4,9 @@ This system is for my fourth-year class, Mobile Systems Development where I am a
 
 
 ## Demo
-
-![](MSDProject-Imgur-ezgif.com-optimize.gif)
+<p align="center">
+  <img src="MSDProject-Imgur-ezgif.com-optimize.gif" alt="animated demo"/>
+</p>
 
 
 ## Installation and how to run
