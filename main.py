@@ -1,4 +1,4 @@
-from View.view import webServer
+from view import webServer
 
 if __name__ == '__main__':
     pwa = webServer('MLR',template_folder='./templates')
