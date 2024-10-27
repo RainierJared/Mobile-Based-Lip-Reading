@@ -1,6 +1,7 @@
 <html>
     <head>
         <title>MLR</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <link rel="manifest" href="/manifest.json">
         <style>
             html {
@@ -24,6 +25,6 @@
         <h1>Mobile Lip Reading</h1>
 
         <!--Video Feed-->
-        <img id="bg" src="{{ url_for('video_feed')}}"
+        <img id="bg" src="{{ url_for('video_feed')}}" width="640" height="480"/>
     </body>
 </html>
